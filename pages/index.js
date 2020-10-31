@@ -1,65 +1,68 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/> 
+        <title>Toronto Eye Prosthetics</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Nav/>
+        <section id="home">
+            <div class="container">
+                <div id="home-a">
+                    <h1>We strive to recreate your eye to be as <span>lifelike</span> and <span>accurate</span> as possible.</h1>
+                    <div class="images">
+                        <img src="/img/main.jpg" alt=""/>
+                        <img src="/img/main2.jpg" alt=""/>
+                        <img src="/img/main3.jpg" alt=""/>
+                    </div>
+                </div>
+                <div id="home-b">
+                    
+                    <div class="card" id="our-prosthetics">
+                        <h1>Our Prosthetics</h1>
+                        <h3>We make custom Ocular Prosthetics for:</h3>
+                        <div class="inner-cols">
+                            <div>
+                                <h3>Artificial Eye</h3>
+                                <p>A prosthesis designed to sit in place of a missing eye.</p>
+                            </div>
+                            <div>
+                                <h3>Scleral Lens/Shell</h3>
+                                <p>A prosthesis designed to cover a blind eye. All prosthetics are custom-fitted, hand-made and hand-painted.</p>
+                            </div>
+                        </div>
+                        {/* <!-- <a href="#">Learn more about presthetic choices.</a> --> */}
+            
+                        <a href="#" class="btn-learn">Learn More</a>
+                    </div>
+                    
+            
+                    
+                        <div class="card" id="experience">
+                            <h1>Experience</h1>
+                            <p>Board certified ocularists <a href="#">Diane and Phil Bowen</a> have years of experience behind them, ready to utilize to help make your eyes smile again.</p>
+        
+                            <a href="#" class="btn-learn">Learn More</a>
+                        </div>
+                    
+        
+                    
+                        <div class="card" id="coverage">
+                            <h1>Coverage</h1>
+                            <p>You may not know it, but most or all of the cost of your new eye may be covered. Visit our <a href="#">fees section</a> or contact us to find out more.</p>
+        
+                            <a href="#" class="btn-learn">Learn More</a>
+                        </div>
+                    
+                </div>
+            </div>
+        </section>
+      <Footer/>
     </div>
   )
 }
